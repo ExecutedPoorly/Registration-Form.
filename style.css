@@ -1,0 +1,36 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+#input_form *{
+  display: block; /* input fields to new lines */
+}
+#input_form select{
+  margin: 5px 0px;
+}
+#top_form ul{
+  padding: 0px;
+  display: block;
+}
+
+
+
+form ul li{
+    margin: 5px 0px;
+    list-style-type: none;
+}
+
+input {
+  border: 2px solid #000;
+  margin-bottom: 15px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: green;
+}
