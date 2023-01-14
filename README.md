@@ -1,2 +1,2 @@
 # Registration-Form.
-Dummy form.
+Dummy form, links are placeholders.
