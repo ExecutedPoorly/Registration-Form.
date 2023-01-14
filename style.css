@@ -1,36 +1,188 @@
-html, body {
-  height: 100%;
-  width: 100%;
+@font-face {
+    font-family: Norse-Bold;
+    src: url("./src/Norse-Bold.otf");
 }
-#input_form *{
-  display: block; /* input fields to new lines */
-}
-#input_form select{
-  margin: 5px 0px;
-}
-#top_form ul{
-  padding: 0px;
-  display: block;
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Sofia+Sans+Semi+Condensed:ital,wght@1,300&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap"); /* font-family: 'Bree Serif', serif; */
+html,
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
 }
 
+.leftcontainer {
+    flex: 1.3 1 0; /* grow, srhink, basis  */
+    min-width: 272px;
+    background-image: url(./src/LeftImage.avif);
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 224px;
+}
 
+.imagecontainerleft {
+    box-sizing: border-box;
+    position: relative;
+    top: 10vh;
+    font-size: 4rem;
+    color: white;
+    height: 14vh;
+    background-color: black;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 117px;
+}
 
-form ul li{
-    margin: 5px 0px;
-    list-style-type: none;
+.imagecontainerleft > p {
+    font-family: "Norse-Bold";
+}
+
+img {
+    height: 10vh;
+    width: auto;
+    min-height: 50%;
+}
+
+.top,
+.middle,
+.bottom {
+    flex: 1;
+    padding-left: 2rem;
+}
+
+#input_form {
+    display: flex;
+    margin-left: -2rem;
+}
+
+#input_form * {
+    display: block; /* block sends input fields to new lines */
+    margin-left: 1rem;
+}
+#input_form label {
+    display: block; /* block sends input fields to new lines */
+    margin-left: 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.parentcontainer {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.rightcontainer {
+    flex: 2 1 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.rightcontainer > .top > p {
+    font-family: "Bree Serif", serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    max-width: 600px;
+}
+
+.middle > p {
+    font-family: "Bree Serif", serif;
+    font-size: 1rem;
+    font-style: oblique;
+    font-weight: bold;
+}
+.middle > :first-child {
+    font-style: normal;
+    font-size: 1.4rem;
+    color: rgb(104, 131, 150);
+}
+
+.top {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.bottom {
+    flex: 0.3;
+    position: relative;
+    top: 2rem;
+}
+.middle {
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.27);
+    flex: 0;
 }
 
 input {
-  border: 2px solid #000;
-  margin-bottom: 15px;
-  padding: 5px;
-  border-radius: 5px;
+    border: 2px solid #000;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 5px;
 }
 
-input:invalid {
+/* input:invalid {
   border-color: red;
-}
-
+} */
 input:valid {
+    border: 2px solid #000;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 5px;
+}
+a {
+    color: green;
+}
+.submitbutton {
+    color: rgb(231, 239, 255);
+    font-size: 25px;
+    line-height: 25px;
+    padding: 11px;
+    border-radius: 10px;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    background-image: linear-gradient(
+        to right,
+        rgb(80, 141, 55) 0%,
+        rgb(80, 141, 55) 100%
+    );
+    box-shadow: rgba(0, 0, 0, 0.18) 5px 5px 15px 4px;
+    border: 0px solid rgb(28, 110, 164);
+    display: inline-block;
+}
+.submitbutton:hover {
+    background: #0ca42d;
+}
+.submitbutton:active {
+    background: #1f22b6;
+}
+/* input:valid {
   border-color: green;
+} */
+
+/* #input_form select{
+  margin: 5px 0px;
+} */
+
+/* form ul li{
+    margin: 5px 0px;
+    list-style-type: none;
+} */
+
+#top_form ul {
+    padding: 0px;
+    display: block;
 }

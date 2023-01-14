@@ -4,136 +4,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>Register</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-  <form id="top_form" action="https://httpbin.org/post" method="post">
-    <ul>
-      <li>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="user_name" />
-      </li>
-      <li>
-        <label for="mail">Email:</label>
-        <input type="email" id="mail" name="user_email" />
-      </li>
-      <li>
-        <label for="msg">Message:</label>
-        <textarea id="msg" name="user_message"></textarea>
-      </li>
-    </ul>
-    <button type="submit">Submit for above form</button>
-  </form>
-
-  <nl></nl>
-  <p> Above is an example using &lt;li&gt; items as separators.</p>
-  <nl></nl>
-
-
-
-  <form id="input_form" action="https://httpbin.org/post" method="post">
-    <!-- action defines url, method attribute defines which HTTP method to send the data with (usually get or post)-->
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="user_name" />
-    <label for="password">Password:</label>
-    <input type="text" id="password" name="user_password" />
-    <label for="zip_code">Postal / Zip Code:</label>
-    <input type="text" id="zip_code" name="zip_code" pattern="(\d{5}([\-]\d{4})?)" title="Please enter a valid zip code, example: 65251" placeholder="90210" required>
-    <!-- digit*5 -->
-    <label for="quantity">Quantity: *min 1, max 5*</label>
-    <input type="number" id="quantity" name="quantity" min="1" max="5" value="0" required>
-    <select name="TestDropDown" id="">
-      <option value="Option A">Option A</option>
-      <option value="Option B">Option B</option>
-      <option value="Option C">Option C</option>
-    </select>
-    <select>
-      <optgroup label="Clothing">
-        <!-- sort of like a header -->
-        <option value="t_shirt">T-Shirts</option>
-        <option value="sweater">Sweaters</option>
-        <option value="coats">Coats</option>
-      <optgroup label="Textiles">
-        <!-- sort of like a header -->
-        <option value="wool">T-Shirts</option>
-        <option value="linen">Sweaters</option>
-        <option value="polyestor">Coats</option>
-    </select>
-    </optgroup>
-    <p> RADIO EXAMPLE BELOW: </p>
-    <div>
-      <input type="radio" id="child" name="ticket_type" value="Option 1" checked>
-      <!-- the checked attribute makes this by default, selected -->
-      <label for="child">Option 1, group 1</label>
-      <!-- name determines which group radio applies to, shares the same input-->
+<div class="parentcontainer">
+  <div class="leftcontainer">
+    <div class="imagecontainerleft">
+      <img src="./src/odin-lined.png" alt="Peppers" width="100%" height="100%"/>
+      <p>REGISTER</p>
     </div>
-    <div>
-      <input type="radio" id="child" name="ticket_type2" value="Option 2, group 2">
-      <label for="child">Option 2, group 2</label>
+  </div>
+  <div class="rightcontainer">
+    <div class="top">
+      <p>This is not a real registration form, nor is it a real online service. This site exists only as a project to create a registration form page.</p>
+      <p>Additional text would go here.</p>
+
     </div>
-    <div>
-      <input type="radio" id="child" name="ticket_type" value="Option 3">
-      <label for="child">Option 3, group 1</label>
+    <div class="middle">
+      <p>Get started!</p>
+      <form id="input_form">
+        <div class="formleft">
+          <label for="firstname">FIRST NAME</label>
+          <input type="text" name="firstname" placeholder="John" id="firstname" required>
+          <label for="email">EMAIL</label>
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <label for="password">PASSWORD</label>
+          <input type="password" minlength="4" maxlength="16" name="password" id="password" placeholder="password" required>
+
+        </div>
+        <div class="formright">
+          <label for="lastname">LAST NAME</label>
+          <input type="text" name="lastname" placeholder="Doe" required>
+          <label for="phone number">PHONE NUMBER</label>
+          <input type="tel" id="phone number" name="phone number" placeholder="2013321919" onchange="validatePassword()" required>
+          <label for="password_confirm">PASSWORD CONFIRM</label>
+          <input type="password" minlength="4" maxlength="16" placeholder="Confirm Password" name="password_confirm" id="confirm_password" onchange="validatePassword()" required>
+
+        </div>
+      
     </div>
-    <p>RADIO CHECKBOXES BELOW: </p>
-
-    <div>
-      <input type="checkbox" id="sausage" name="topping" value="sausage" checked>
-      <label for="sausage">Sausage</label>
+    <div class="bottom">
+      <button type="submit" class="submitbutton">Create Account</button>
+      </form>
+      <p>Already have an account? <a href="#">Log In</a></p>
+      
+      <div class="BottomSubContaner"></div>
     </div>
-
-    <div>
-      <input type="checkbox" id="onions" name="topping" value="onions">
-      <label for="onions">Onions</label>
-    </div>
-    <p> Reset all to default button </p>
-    <button type="reset">Reset</button>
-    <p> Submit Button </p>
-    <button type="submit" style="color: red">Submit</button>
-    <p> Generic Button </p>
-    <button type="button">Click to Toggle</button>
-    <p> Fieldset Example </p>
-    <!-- The fieldset element is a container element that allows us to group related form inputs into one logical unit. -->
-    <fieldset>
-      <legend>This is a legend display, it labels form fieldsets.</legend>
-      <label for="first_name">First Name</label>
-      <input type="text" id="first_name" name="first_name">
-      <!-- required field attribute-->
-      <label for="last_name" required>Last Name *has min and max lengths of 3, 6*</label>
-      <input type="text" id="last_name" name="last_name" minlength="3" maxlength="6" required>
-
-
-
-    </fieldset>
-    <p> FIELDSET WITH RADIO BELOW: </p>
-    <fieldset>
-      <legend>What would you like to drink?</legend>
-
-      <div>
-        <input type="radio" name="drink" id="coffee" value="coffee">
-        <label for="coffee">Coffee</label>
-      </div>
-
-      <div>
-        <input type="radio" name="drink" id="tea" value="tea">
-        <label for="tea">Tea</label>
-      </div>
-
-      <div>
-        <input type="radio" name="drink" id="soda" value="soda">
-        <label for="soda">Soda</label>
-      </div>
-
-    </fieldset>
-  </form>
-
-
+  </div>
+</div>
 
 
 
 </body>
 
-</html>
+</html>  
+
+</form>
